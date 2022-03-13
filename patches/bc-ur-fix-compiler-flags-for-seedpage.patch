@@ -1,0 +1,51 @@
+From aa7f7e68328424df56dff64fe1b65815e6785a06 Mon Sep 17 00:00:00 2001
+From: Jonas Wagner <ltlygwayh@gmail.com>
+Date: Sun, 13 Mar 2022 18:37:59 +0100
+Subject: [PATCH] bc-ur: fix compiler flags for seedpage.
+
+---
+ src/Makefile.in  | 5 ++---
+ test/Makefile.in | 7 +++----
+ 2 files changed, 5 insertions(+), 7 deletions(-)
+
+diff --git a/src/Makefile.in b/src/Makefile.in
+index 0a93e97..6337226 100644
+--- a/src/Makefile.in
++++ b/src/Makefile.in
+@@ -27,9 +27,8 @@ RED=`tput setaf 1`
+ GREEN=`tput setaf 2`
+ RESET=`tput sgr0`
+
+-COMPILER = g++
+-CFLAGS += --debug -O0
+-CXXFLAGS += -std=c++17 -stdlib=libc++ --debug -O0
++CFLAGS += -g
++CXXFLAGS += -std=c++17 -g
+
+ ARFLAGS = rcs
+
+diff --git a/test/Makefile.in b/test/Makefile.in
+index 8c52594..2d1b576 100644
+--- a/test/Makefile.in
++++ b/test/Makefile.in
+@@ -27,14 +27,13 @@ RED=`tput setaf 1`
+ GREEN=`tput setaf 2`
+ RESET=`tput sgr0`
+
+-COMPILER = g++
+-CFLAGS += --debug -O0
+-CXXFLAGS += -std=c++17 -stdlib=libc++ --debug -O0
++CFLAGS += -g
++CXXFLAGS += -std=c++17 -g
+
+ UNAME := $(shell uname)
+
+ ifeq ($(UNAME), Linux)
+-    LDLIBS +=  -lm -lc++ -lc++abi -lgcc_s -lgcc
++    LDLIBS +=  -lm -lc++ -lc++abi
+ else ifeq ($(findstring MINGW64, $(UNAME)), MINGW64)
+     # on windows building with msys2/mingw64
+     LDLIBS +=  -lm -lc++ -lws2_32
+--
+2.25.1
+
