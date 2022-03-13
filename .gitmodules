@@ -1,0 +1,3 @@
+[submodule "lib/seedtool-cli"]
+	path = lib/seedtool-cli
+	url = https://github.com/BlockchainCommons/seedtool-cli.git
