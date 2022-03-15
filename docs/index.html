@@ -4,99 +4,27 @@
 <head>
   <meta charset="utf-8">
   <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
   <title>Seedpage</title>
-  <style>
-    body {
-      font-family: arial;
-      margin: 0;
-      padding: none;
-    }
-
-    #output {
-      width: 100%;
-      margin: 10px auto 0;
-      padding: 10px;
-      background-color: black;
-      color: white;
-      font-family: 'Lucida Console', Monaco, monospace;
-    }
-
-    #input {
-      width: 89%;
-      margin: 10px 0 0;
-      padding: 10px;
-      font-family: 'Lucida Console', Monaco, monospace;
-    }
-
-    #lets-go-container {
-      width: 9%;
-      margin: 10px 0 0;
-      padding: 0 0 0 10px;
-      box-sizing: border-box;
-    }
-
-    #lets-go {
-      width: 100%;
-      margin: 0;
-      padding: 10px;
-      box-sizing: border-box;
-      background-color: blue;
-      font-family: 'Lucida Console', Monaco, monospace;
-    }
-  </style>
+  <link rel="stylesheet" href="page.css">
 </head>
 
-<body>
+<body style="background-image: url(media/screen-numbers.jpg);" class="bg-top bg-no-repeat bg-cover">
 
-  <div style="display: flex;">
-    <input type="text" id="input" placeholder="seedtool arguments..." />
-    <div id="lets-go-container">
-      <input type="button" id="lets-go" value="Go!"/>
+  <div class="max-w-xl mx-auto px-4 py-1 min-h-screen backdrop-blur-md bg-white/50 dark:bg-black/50">
+
+    <h1 class="text-3xl font-bold text-center dark:text-white">seedpage</h1>
+
+    <div class="flex mt-4">
+      <input class="flex-auto rounded" type="text" id="input" placeholder="seedtool arguments..." />
+      <input class="flex-none ml-2 bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded" type="button" id="lets-go" value="Go!"/>
     </div>
+    <!-- TODO(Jonas): Change background color to something like amber-200 if we detect problems (e.g., not in airplane mode). -->
+    <pre class="bg-blue-200/50 rounded border mt-4 p-4"><code id="output"></code></pre>
   </div>
-  <pre id="output"></pre>
 
-  <script type='text/javascript'>
-
-    function getRandomSeed() {
-      const bytes = new Uint8Array(32);
-      crypto.getRandomValues(bytes);
-      return Array.from(bytes).map(b => ('0' + b.toString(16)).slice(-2)).join('');
-    }
-
-    function getArguments() {
-      const seed = ["--deterministic", getRandomSeed()];
-      const input = document.getElementById("input").value;
-      const arguments = input ? seed.concat(input.split(/\s+/)) : seed;
-      console.log("arguments:", arguments);
-      return arguments;
-    }
-
-    function setArgumentsAndRun() {
-      Module.arguments = getArguments();
-      document.getElementById('output').textContent = "";
-      callMain(Module.arguments);
-    }
-
-    var Module = {};
-    Module.print = (function () {
-      var element = document.getElementById('output');
-      return function (text) {
-        if (arguments.length > 1) text = Array.prototype.slice.call(arguments).join(' ');
-        console.log(text);
-        element.textContent += text + "\n";
-      };
-    })();
-    Module.arguments = getArguments();
-
-    window.addEventListener('load', () => {
-      const seedtoolScript = document.createElement('script');
-      seedtoolScript.src = "seedtool.js";
-      document.body.appendChild(seedtoolScript);
-
-      document.getElementById('lets-go').addEventListener('click', setArgumentsAndRun);
-    });
-  </script>
+  <script src="page.js"></script>
 </body>
 
 </html>
