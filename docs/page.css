@@ -696,12 +696,12 @@ select {
   max-width: 36rem;
 }
 
-.flex-auto {
-  flex: 1 1 auto;
-}
-
 .flex-none {
   flex: none;
+}
+
+.flex-auto {
+  flex: 1 1 auto;
 }
 
 .grow {
@@ -749,6 +749,10 @@ select {
 
 .bg-no-repeat {
   background-repeat: no-repeat;
+}
+
+.p-2 {
+  padding: 0.5rem;
 }
 
 .p-4 {
