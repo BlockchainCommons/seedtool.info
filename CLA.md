@@ -1,6 +1,6 @@
 # Contributor License Agreement
 
-Version 1.0
+Version 1.1
 
 Name: `$name`
 
@@ -8,22 +8,25 @@ E-Mail: `$email`
 
 Legal Jurisdiction: Wyoming, United States of America
 
-Project: https://github.com/BlockchainCommons/bc-lethe-kit
+Project: https://github.com/BlockchainCommons/seedtool.info
 
 Date: `$date`
 
-## Purpose
+## Purpose and Scope
 
-This agreement gives Blockchain Commons, LLC the permission it needs in order to accept my contributions into its open software project and to manage the intellectual property in that project over time.
+This agreement gives Blockchain Commons, LLC the permission it needs in order to accept my contributions into the present open software project, and to manage the intellectual property in that project over time.
+
+My "contributions" covered by this agreement are limited to:
+
+- Source code, documentation, and other files committed to this repository
+- Activity on this repository on GitHub (such as activity in issues, wiki pages, etc.)
 
 ## License
 
 I hereby license Blockchain Commons, LLC to:
 
 1.  do anything with my contributions that would otherwise infringe my copyright in them
-
 2.  do anything with my contributions that would otherwise infringe patents that I can or become able to license
-
 3.  sublicense these rights to others on any terms they like
 
 ## Reliability
@@ -44,7 +47,7 @@ I promise not to offer contributions to the project that I know infringe patents
 
 ## Open Source Guarantee
 
-I promise not to offer contributions that contain or depend on the work of others, unless that work is available under a license that [Blue Oak Council rates bronze or better](https://blueoakconcil.org/list), such as the MIT License, two- or three-clause BSD License, the Apache License Version 2.0, or the Blue Oak Model License 1.0.0.  When I offer a contribution containing or depending on others' work, I promise to document in the contribution who licenses that work, along with copies of their license terms.
+I promise not to offer contributions that contain or depend on the work of others, unless that work is available under a license that [Blue Oak Council rates bronze or better](https://blueoakcouncil.org/list), such as the MIT License, two- or three-clause BSD License, the Apache License Version 2.0, or the Blue Oak Model License 1.0.0.  When I offer a contribution containing or depending on others' work, I promise to document in the contribution who licenses that work, along with copies of their license terms.
 
 ## Disclaimers
 
