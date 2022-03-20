@@ -1,8 +1,10 @@
 var Module = {};
 Module.noInitialRun = true;
+Module.onRuntimeInitialized = () => Module.isInitialized = true;
 Module.print = printToElement;
 Module.printErr = printErr;
 Module.outputElement = null;
+Module.isInitialized = false;
 
 function getEntropy() {
     const bytes = new Uint8Array(32);
@@ -61,7 +63,7 @@ function runSeedtool() {
 }
 
 function waitForSeedtoolAndRun() {
-    if (typeof Module.run === 'undefined') {
+    if (!Module.isInitialized) {
         setTimeout(waitForSeedtoolAndRun, 100);
     } else {
         setTimeout(runSeedtool, 100);
