@@ -16,34 +16,39 @@
 
     <h1 class="text-3xl font-bold text-center dark:text-white">seedpage</h1>
 
-    <label class="flex mt-4">
+    <label class="flex mt-4 overflow-auto">
       <code class="flex-none p-2 dark:text-white font-bold border rounded">--deterministic</code>
-      <input class="flex-auto ml-2 rounded" type="text" id="entropy" placeholder="entropy -- must be unpredictable!" />
+      <input class="flex-1 ml-2 rounded" type="text" id="entropy" placeholder="entropy -- must be unpredictable!" />
     </label>
 
     <div class="flex mt-4">
-      <input class="flex-auto rounded" type="text" id="input" placeholder="seedtool arguments..." />
+      <input class="flex-1 rounded" type="text" id="input" placeholder="seedtool arguments..." />
       <input class="flex-none ml-2 bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded" type="button" id="lets-go" value="Go!"/>
     </div>
     <!-- TODO(Jonas): Change background color to something like amber-200 if we detect problems (e.g., not in airplane mode). -->
     <div class="flex mt-4">
-      <code class="flex-none w-20 p-2 dark:text-white font-bold border rounded">hex</code>
-      <pre class="flex-auto bg-blue-200/50 rounded border ml-2 p-2 whitespace-pre-wrap"><code id="output-hex"></code></pre>
+      <code class="w-1/4 p-2 dark:text-white font-bold border rounded">hex</code>
+      <pre class="w-3/4 bg-blue-200/50 rounded border ml-2 p-2 whitespace-normal break-words"><code id="output-hex"></code></pre>
     </div>
     <div class="flex mt-4">
-      <code class="flex-none w-20 p-2 dark:text-white font-bold border rounded">btw</code>
-      <pre class="flex-auto bg-blue-200/50 rounded border ml-2 p-2 whitespace-pre-wrap"><code id="output-btw"></code></pre>
+      <code class="w-1/4 p-2 dark:text-white font-bold border rounded">btw</code>
+      <pre class="w-3/4 bg-blue-200/50 rounded border ml-2 p-2 whitespace-normal break-words"><code id="output-btw"></code></pre>
     </div>
     <div class="flex mt-4">
-      <code class="flex-none w-20 p-2 dark:text-white font-bold border rounded">bip39</code>
-      <pre class="flex-auto bg-blue-200/50 rounded border ml-2 p-2 whitespace-pre-wrap"><code id="output-bip39"></code></pre>
+      <code class="w-1/4 p-2 dark:text-white font-bold border rounded">bip39</code>
+      <pre class="w-3/4 bg-blue-200/50 rounded border ml-2 p-2 whitespace-normal break-words"><code id="output-bip39"></code></pre>
     </div>
     <div class="flex mt-4">
-      <code class="flex-none w-20 p-2 dark:text-white font-bold border rounded">sskr</code>
-      <pre class="flex-auto bg-blue-200/50 rounded border ml-2 p-2 whitespace-pre-wrap"><code id="output-sskr"></code></pre>
+      <code class="w-1/4 p-2 dark:text-white font-bold border rounded">sskr</code>
+      <pre class="w-3/4 bg-blue-200/50 rounded border ml-2 p-2 whitespace-normal break-words"><code id="output-sskr"></code></pre>
+    </div>
+    <div class="flex mt-4">
+      <code class="w-1/4 p-2 dark:text-white font-bold border rounded">QR</code>
+      <div class="w-3/4 bg-blue-200/50 rounded border ml-2 p-2 whitespace-normal break-words flex" id="output-qr"></div>
     </div>
   </div>
 
+  <script src="lib/qrcodejs/qrcode.js"></script>
   <script src="page.js?v=0.0.2"></script>
 </body>
 
