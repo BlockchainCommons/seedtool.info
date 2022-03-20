@@ -2,9 +2,11 @@
 @tailwind components;
 @tailwind utilities;
 
-.qr img {
+.qr img, .qr canvas {
     margin: 0 auto;
-    background-color: white;
     padding: 1rem;
+    max-width: 100%;
+    box-sizing: border-box;
+    background-color: white;
     border-radius: 0.25rem;
 }
