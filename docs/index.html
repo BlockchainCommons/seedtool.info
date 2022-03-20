@@ -12,7 +12,7 @@
 
 <body style="background-image: url(media/screen-numbers.jpg);" class="bg-top bg-no-repeat bg-cover">
 
-  <div class="max-w-xl mx-auto px-4 py-1 min-h-screen backdrop-blur-md bg-white/50 dark:bg-black/50">
+  <div class="max-w-xl w-screen mx-auto px-4 py-1 min-h-screen box-border backdrop-blur-md bg-white/50 dark:bg-black/50">
 
     <h1 class="text-3xl font-bold text-center dark:text-white">seedpage</h1>
 
@@ -26,7 +26,22 @@
       <input class="flex-none ml-2 bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded" type="button" id="lets-go" value="Go!"/>
     </div>
     <!-- TODO(Jonas): Change background color to something like amber-200 if we detect problems (e.g., not in airplane mode). -->
-    <pre class="bg-blue-200/50 rounded border mt-4 p-4"><code id="output"></code></pre>
+    <div class="flex mt-4">
+      <code class="flex-none w-20 p-2 dark:text-white font-bold border rounded">hex</code>
+      <pre class="flex-auto bg-blue-200/50 rounded border ml-2 p-2 whitespace-pre-wrap"><code id="output-hex"></code></pre>
+    </div>
+    <div class="flex mt-4">
+      <code class="flex-none w-20 p-2 dark:text-white font-bold border rounded">btw</code>
+      <pre class="flex-auto bg-blue-200/50 rounded border ml-2 p-2 whitespace-pre-wrap"><code id="output-btw"></code></pre>
+    </div>
+    <div class="flex mt-4">
+      <code class="flex-none w-20 p-2 dark:text-white font-bold border rounded">bip39</code>
+      <pre class="flex-auto bg-blue-200/50 rounded border ml-2 p-2 whitespace-pre-wrap"><code id="output-bip39"></code></pre>
+    </div>
+    <div class="flex mt-4">
+      <code class="flex-none w-20 p-2 dark:text-white font-bold border rounded">sskr</code>
+      <pre class="flex-auto bg-blue-200/50 rounded border ml-2 p-2 whitespace-pre-wrap"><code id="output-sskr"></code></pre>
+    </div>
   </div>
 
   <script src="page.js?v=0.0.2"></script>

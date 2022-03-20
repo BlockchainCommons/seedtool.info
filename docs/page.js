@@ -1,3 +1,8 @@
+var Module = {};
+Module.noInitialRun = true;
+Module.print = printToElement;
+Module.outputElement = null;
+
 function getEntropy() {
     const bytes = new Uint8Array(32);
     crypto.getRandomValues(bytes);
@@ -15,29 +20,26 @@ function runSeedtool() {
     const arguments = getArguments();
     console.log("arguments:", arguments);
 
-    document.getElementById('output').textContent = "";
-
-    callMain(arguments);
+    for (const format of ["hex", "btw", "bip39", "sskr"]) {
+        Module.outputElement = document.getElementById(`output-${format}`)
+        Module.outputElement.textContent = "";
+        callMain(arguments.concat([`--out=${format}`]))
+    }
 }
 
 function waitForSeedtoolAndRun() {
-    if (typeof callMain === 'undefined') {
+    if (typeof Module.run === 'undefined') {
         setTimeout(waitForSeedtoolAndRun, 100);
     } else {
         runSeedtool();
     }
 }
 
-var Module = {};
-Module.print = (function () {
-    var element = document.getElementById('output');
-    return function (text) {
-        if (arguments.length > 1) text = Array.prototype.slice.call(arguments).join(' ');
-        console.log(text);
-        element.textContent += text + "\n";
-    };
-})();
-Module.noInitialRun = true;
+function printToElement(text) {
+    if (arguments.length > 1) text = Array.prototype.slice.call(arguments).join(' ');
+    console.log(text);
+    Module.outputElement.textContent += text + "\n";
+}
 
 window.addEventListener('load', () => {
     const seedtoolScript = document.createElement('script');
