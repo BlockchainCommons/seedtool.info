@@ -28,6 +28,24 @@ function setBackgroundColor(element, color) {
     element.classList.add(color);
 }
 
+function filterArguments(arguments, format) {
+    const applicableArguments = []
+    for (var i = 0; i < arguments.length; ++i) {
+        if (/^--group=/.test(arguments[i])) {
+            // --group=x-of-y is only applicable for sskr format.
+            if (format != "sskr") continue;
+        } else if (arguments[i] == "--group") {
+            // Same as above, but the group is a separate argument.
+            if (format != "sskr") {
+                i += 1;
+                continue;
+            }
+        }
+        applicableArguments.push(arguments[i]);
+    }
+    return applicableArguments;
+}
+
 function runSeedtool() {
     const arguments = getArguments();
     console.log("arguments:", arguments);
@@ -40,23 +58,15 @@ function runSeedtool() {
         Module.outputElement = document.getElementById(`output-${format}`);
         Module.outputElement.textContent = "";
 
-        if (arguments.some(arg => /^--group/.test(arg)) && format != "sskr") {
-            setBackgroundColor(Module.outputElement.parentElement, "bg-neutral-200/50");
-            continue;
-        }
-
+        const applicableArguments = filterArguments(arguments, format);
         setBackgroundColor(Module.outputElement.parentElement, "bg-blue-200/50");
-        callMain(arguments.concat([`--out=${format}`]))
+        callMain(applicableArguments.concat([`--out=${format}`]))
     }
 
-    for (const format of ["hex", "bip39", "sskr"]) {
+    for (const format of ["hex", "sskr"]) {
         Module.outputElement = null;
-
-        if (arguments.some(arg => /^--group/.test(arg)) && format != "sskr") {
-            continue;
-        }
-
-        callMain(arguments.concat(["--ur", `--out=${format}`]))
+        const applicableArguments = filterArguments(arguments, format);
+        callMain(applicableArguments.concat(["--ur", `--out=${format}`]))
     }
 
     initQrCarousel();
