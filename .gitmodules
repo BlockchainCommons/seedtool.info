@@ -1,3 +1,6 @@
 [submodule "lib/seedtool-cli"]
 	path = lib/seedtool-cli
 	url = https://github.com/BlockchainCommons/seedtool-cli.git
+[submodule "lib/qrcodejs"]
+	path = lib/qrcodejs
+	url = https://github.com/davidshimjs/qrcodejs.git
