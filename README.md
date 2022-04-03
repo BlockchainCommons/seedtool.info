@@ -12,14 +12,9 @@ Shamir shares of seeds.
 
 All documentation is integrated in the online version, accessible through https://seedtool.info.
 
-## Gordian Principles
+## Usage Instructions
 
-seedtool.info is a reference implementation meant to display the [Gordian Principles](https://github.com/BlockchainCommons/Gordian#gordian-principles), which are philosophical and technical underpinnings to Blockchain Commons' Gordian technology. This includes:
-
-* **Independence.** seedtool.info enables *anyone* to generate their own cryptographic seeds. There are no dependencies and conditions, except having a device that can run a recent web browser (for example, a post-2017 Android phone).
-* **Privacy.** seedtool.info can run locally, in aeroplane mode, and does not log or store any user interaction.
-* **Resilience.** One of the main use cases for seedtool.info is to generate Shamir shares of seeds. It thus provides a way to store seeds that is resiliant to loss and theft of individual shares, if used correctly.
-* **Openness.** seedtool.info is open-source software and based on open standards like [SSKR](https://github.com/BlockchainCommons/bc-sskr) and [ByteWords](https://github.com/blockchaincommons/bc-bytewords).
+Browse to https://seedtool.info and follow the hints. You can type `--help` into the "seedtool arguments..." field for more detailed instructions.
 
 ## Status - Alpha
 
@@ -36,13 +31,18 @@ seedtool.info is currently under active development and in the alpha testing pha
   - Use color coding to indicate whether something is public or private
   - Add guards to prevent a weak or reused entropy
 
-## Usage Instructions
+## Gordian Principles
 
-Browse to https://seedtool.info and follow the hints. You can type `--help` into the "seedtool arguments..." field for more detailed instructions.
+seedtool.info is a reference implementation meant to display the [Gordian Principles](https://github.com/BlockchainCommons/Gordian#gordian-principles), which are philosophical and technical underpinnings to Blockchain Commons' Gordian technology. This includes:
+
+* **Independence.** seedtool.info enables *anyone* to generate their own cryptographic seeds. There are no dependencies and conditions, except having a device that can run a recent web browser (for example, a post-2017 Android phone).
+* **Privacy.** seedtool.info can run locally, in aeroplane mode, and does not log or store any user interaction.
+* **Resilience.** One of the main use cases for seedtool.info is to generate Shamir shares of seeds. It thus provides a way to store seeds that is resiliant to loss and theft of individual shares, if used correctly.
+* **Openness.** seedtool.info is open-source software and based on open standards like [SSKR](https://github.com/BlockchainCommons/bc-sskr) and [ByteWords](https://github.com/blockchaincommons/bc-bytewords).
 
 ## Origin, Authors, Copyright & Licenses
 
-Unless otherwise noted (either in this [/README.md](./README.md) or in the file's header comments), the contents of this repository are Copyright © 2022 by Blockchain Commons, LLC, and are [licensed](./LICENSE) under the [spdx:BSD-2-Clause Plus Patent License](https://spdx.org/licenses/BSD-2-Clause-Patent.html).
+Unless otherwise noted (either in this [README.md](./README.md) or in the file's header comments), the contents of this repository are Copyright © 2022 by Blockchain Commons, LLC, and are [licensed](./LICENSE) under the [spdx:BSD-2-Clause Plus Patent License](https://spdx.org/licenses/BSD-2-Clause-Patent.html).
 
 In most cases, the authors, copyright, and license for each file reside in header comments in the source code.
 
@@ -89,7 +89,7 @@ The following people directly contributed to this repository. You can add your n
 | ------------ | ----------------- | ------------------------------------ | ----------------------- | -------------------------------------------------- |
 | Jonas Wagner | Software Engineer | [@Sjlver](https://github.com/Sjlver) | \<ltlygwayh@gmail.com\> | B61A 9761 C9D2 789C 0896  6C63 209C 9222 DB5F BD15 |
 
-Page background photo by [Markus Spiske](https://unsplash.com/@markusspiske)" on [Unsplash](https://unsplash.com/s/photos/numbers-screen).
+Page background photo by [Markus Spiske](https://unsplash.com/@markusspiske) on [Unsplash](https://unsplash.com/s/photos/numbers-screen).
 
 ## Responsible Disclosure
 
