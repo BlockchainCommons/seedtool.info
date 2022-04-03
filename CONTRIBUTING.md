@@ -11,7 +11,7 @@ We love your input! We want to make contributing to this project as easy and tra
 ## We Develop with Github
 We use GitHub to host code, to track issues and feature requests, and to accept Pull Requests.
 
-## Report Bugs using Github's [issues](https://github.com/briandk/transcriptase-atom/issues)
+## Report Bugs using Github's [issues](./issues)
 
 If you find bugs, mistakes, or inconsistencies in this project's code or documents, please let us know by [opening a new issue](./issues), but consider searching through existing issues first to check and see if the problem has already been reported. If it has, it never hurts to add a quick "+1" or "I have this problem too". This helps prioritize the most common problems and requests.
 
@@ -24,7 +24,7 @@ If you find bugs, mistakes, or inconsistencies in this project's code or documen
 - A quick summary and/or background
 - Steps to reproduce
   - Be specific!
-  - Give sample code if you can. [The stackoverflow bug report](http://stackoverflow.com/q/12488905/180626) includes sample code that *anyone* with a base R setup can run to reproduce what I was seeing
+  - Give sample code if you can. [The stackoverflow bug report](http://stackoverflow.com/q/12488905/180626) includes sample code that *anyone* with a base R setup can run to reproduce what the author was seeing
 - What you expected would happen
 - What actually happens
 - Notes (possibly including why you think this might be happening, or stuff you tried that didn't work)
@@ -35,7 +35,7 @@ People *love* thorough bug reports. I'm not even kidding.
 
 Simple Pull Requests to fix typos, to document, or to fix small bugs are always welcome.
 
-We ask that more significant improvements to the project be first proposed before anybody starts to code as an [issue](./issues) or as a [draft Pull Request](./pulls), which is a [nice new feature](https://github.blog/2019-02-14-introducing-draft-pull-requests/) that gives other contributors a chance to point you in the right direction, give feedback on the design, and maybe discuss if related work is already under way.
+We ask that more significant improvements to the project be first proposed before anybody starts to code as an [issue](./issues) or as a [draft Pull Request](./pulls), which is a [feature](https://github.blog/2019-02-14-introducing-draft-pull-requests/) that gives other contributors a chance to point you in the right direction, give feedback on the design, and maybe discuss if related work is already under way.
 
 ### Use a Consistent Coding Style
 
@@ -47,7 +47,7 @@ We ask that more significant improvements to the project be first proposed befor
 
 We use [Github Flow](https://guides.github.com/introduction/flow/index.html). When you submit Pull Requests, please:
 
-1. Fork the repo and create your branch from `master`.
+1. Fork the repo and create your branch from `main`.
 2. If you've added code that should be tested, add tests.
 3. If you've changed APIs, update the documentation.
 4. Ensure the test suite passes.

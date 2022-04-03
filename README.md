@@ -1,109 +1,65 @@
-# Blockchain Commons `$projectname`
+# Blockchain Commons seedtool.info
 
-<!--Guidelines: https://github.com/BlockchainCommons/secure-template/wiki -->
+### By Jonas Wagner
 
-### _by $major-authors_
-
-**`$ProjectDescription`** is …
+[seedtool.info](https://seedtool.info) is a version of
+[`seedtool`](https://github.com/BlockchainCommons/seedtool-cli) that is
+accessible to anyone with a web browser -- no technical skills needed. It aims
+to be a simple, easy to use, and secure way for everyone to generate seeds and
+Shamir shares of seeds.
 
 ## Additional Information
 
-The following files contain…
-
-* `$ListOfEssentialDocs`
+All documentation is integrated in the online version, accessible through https://seedtool.info.
 
 ## Gordian Principles
 
-` $projectname` is a reference implementation meant to display the [Gordian Principles](https://github.com/BlockchainCommons/Gordian#gordian-principles), which are philosophical and technical underpinnings to Blockchain Commons' Gordian technology. This includes:
+seedtool.info is a reference implementation meant to display the [Gordian Principles](https://github.com/BlockchainCommons/Gordian#gordian-principles), which are philosophical and technical underpinnings to Blockchain Commons' Gordian technology. This includes:
 
-* **Independence.** `how does it demonstrate independence`
-* **Privacy.** `how does it demonstrate privacy`
-* **Resilience.** `how does it demonstrate resilience`
-* **Openness.** `how does it demonstrate openness`
+* **Independence.** seedtool.info enables *anyone* to generate their own cryptographic seeds. There are no dependencies and conditions, except having a device that can run a recent web browser (for example, a post-2017 Android phone).
+* **Privacy.** seedtool.info can run locally, in aeroplane mode, and does not log or store any user interaction.
+* **Resilience.** One of the main use cases for seedtool.info is to generate Shamir shares of seeds. It thus provides a way to store seeds that is resiliant to loss and theft of individual shares, if used correctly.
+* **Openness.** seedtool.info is open-source software and based on open standards like [SSKR](https://github.com/BlockchainCommons/bc-sskr) and [ByteWords](https://github.com/blockchaincommons/bc-bytewords).
 
-Blockchain Commons apps do not phone home and do not run ads. Some are available through various app stores; all are available in our code repositories for your usage.
+## Status - Alpha
 
-`REMOVE THIS SECTION UNLESS THIS IS A REFERENCE APP MEANT TO DEMONSTRATE GORDIAN PRINCIPLES`
-
-## Status - Late Alpha
-
-` $projectname`  is currently under active development and in the late alpha testing phase. It should not be used for production tasks until it has had further testing and auditing.
+seedtool.info is currently under active development and in the alpha testing phase. It should not be used for production tasks until it has had further testing and auditing.
 
 ### Roadmap
 
-## Prerequisites
-
-## Installation Instructions
+- Write documentation and integrate directly into seedtool
+- Update development workflow such that the output is truly a standalone, single HTML file.
+- Improve the recovery features in seedtool.info, so that they are as easy to use as the seed generation features
+- Make it easier for the user to use the tool correctly and securely:
+  - Warn if not in aeroplane mode
+  - Maybe: warn if not in an incognito window
+  - Use color coding to indicate whether something is public or private
+  - Add guards to prevent a weak or reused entropy
 
 ## Usage Instructions
 
+Browse to https://seedtool.info and follow the hints. You can type `--help` into the "seedtool arguments..." field for more detailed instructions.
+
 ## Origin, Authors, Copyright & Licenses
 
-Unless otherwise noted (either in this [/README.md](./README.md) or in the file's header comments) the contents of this repository are Copyright © 2020 by Blockchain Commons, LLC, and are [licensed](./LICENSE) under the [spdx:BSD-2-Clause Plus Patent License](https://spdx.org/licenses/BSD-2-Clause-Patent.html).
+Unless otherwise noted (either in this [/README.md](./README.md) or in the file's header comments), the contents of this repository are Copyright © 2022 by Blockchain Commons, LLC, and are [licensed](./LICENSE) under the [spdx:BSD-2-Clause Plus Patent License](https://spdx.org/licenses/BSD-2-Clause-Patent.html).
 
-In most cases, the authors, copyright, and license for each file reside in header comments in the source code. When it does not, we have attempted to attribute it accurately in the table below.
+In most cases, the authors, copyright, and license for each file reside in header comments in the source code.
 
-This table below also establishes provenance (repository of origin, permalink, and commit id) for files included from repositories that are outside of this repo. Contributors to these files are listed in the commit history for each repository, first with changes found in the commit history of this repo, then in changes in the commit history of their repo of their origin.
-
-| File      | From                                                         | Commit                                                       | Authors & Copyright (c)                                | License                                                     |
-| --------- | ------------------------------------------------------------ | ------------------------------------------------------------ | ------------------------------------------------------ | ----------------------------------------------------------- |
-| exception-to-the-rule.c or exception-folder | [https://github.com/community/repo-name/PERMALINK](https://github.com/community/repo-name/PERMALINK) | [https://github.com/community/repo-name/commit/COMMITHASH]() | 2020 Exception Author  | [MIT](https://spdx.org/licenses/MIT)                        |
-
-### Dependencies
-
-To build  `$projectname` you'll need to use the following tools:
-
-- autotools - Gnu Build System from Free Software Foundation ([intro](https://www.gnu.org/software/automake/manual/html_node/Autotools-Introduction.html)).
-
-### Libraries
-
-The following external libraries are used with `$projectname`:
-
-- [community/repo-name](https://github.com/community/repo-name) — What the library does (use OR fork [version] OR include [version]).
-
-Libraries may be marked as `use` (the current version of the library is used), `fork` (a specific version has been forked to the BCC repos for usage), or `include` (files from a specific version have been included).
+seedtool.info relies on other open-source software, see [`.gitmodules`](./.gitmodules).
 
 ### Derived from ...
 
-This  `$projectname` project is either derived from or was inspired by:
+This seedtool.info project is either derived from or was inspired by:
 
-- [community/repo-name/](https://github.com/community/repo-name) — Repo that does what, by [developer](https://github.com/developer)  or from  [community](https://community.com).
-
-## Subsequent Usage
-
-### Adapted by ...
-
-These are adaptations, conversions, and wrappers that make `$projectname` available for other languages:
-
-- [community/repo-name/](https://github.com/community/repo-name) — Repo that does what, by [developer](https://github.com/developer)  or from  [community](https://community.com)(language).
-
-### Used by ...
-
-These are other projects that directly use `$projectname`:
-
-- [community/repo-name/](https://github.com/community/repo-name) — Repo that does what, by [developer](https://github.com/developer)  or from  [community](https://community.com)(use OR fork [version] OR include [version]).
-
-Libraries may be marked as `use` (the current version of our repo is used), `fork` (a specific version of our repo has been forked for usage), or `include` (files from a specific version of our repo have been included).
-
-### Used with ...
-
-These are other projects that work with or leverage `$projectname`:
-
-- [community/repo-name/](https://github.com/community/repo-name) — Repo that does what, by [developer](https://github.com/developer)  or from  [community](https://community.com).
+- [BlockchainCommons/seedtool-cli](https://github.com/BlockchainCommons/seedtool-cli) — The original seedtool implementation in C, by Christopher Allen and Wolf McNally.
+- [iancoleman/bip39](https://github.com/iancoleman/bip39) — another all-you-need-is-a-web-browser tool with similar goals.
 
 ## Financial Support
 
-`$projectname` is a project of [Blockchain Commons](https://www.blockchaincommons.com/). We are proudly a "not-for-profit" social benefit corporation committed to open source & open development. Our work is funded entirely by donations and collaborative partnerships with people like you. Every contribution will be spent on building open tools, technologies, and techniques that sustain and advance blockchain and internet security infrastructure and promote an open web.
+seedtool.info is a project of [Blockchain Commons](https://www.blockchaincommons.com/). We are proudly a "not-for-profit" social benefit corporation committed to open source & open development. Our work is funded entirely by donations and collaborative partnerships with people like you. Every contribution will be spent on building open tools, technologies, and techniques that sustain and advance blockchain and internet security infrastructure and promote an open web.
 
-To financially support further development of `$projectname` and other projects, please consider becoming a Patron of Blockchain Commons through ongoing monthly patronage as a [GitHub Sponsor](https://github.com/sponsors/BlockchainCommons). You can also support Blockchain Commons with bitcoins at our [BTCPay Server](https://btcpay.blockchaincommons.com/).
-
-### Project Sponsors
-
-Thanks to our project sponsors for their support of `$projectname`:
-
-$sponsor-logo-with-link
-
-$sponsor-description
+To financially support further development of seedtool.info and other projects, please consider becoming a Patron of Blockchain Commons through ongoing monthly patronage as a [GitHub Sponsor](https://github.com/sponsors/BlockchainCommons). You can also support Blockchain Commons with bitcoins at our [BTCPay Server](https://btcpay.blockchaincommons.com/).
 
 ## Contributing
 
@@ -113,7 +69,7 @@ We encourage public contributions through issues and pull requests! Please revie
 
 The best place to talk about Blockchain Commons and its projects is in our GitHub Discussions areas.
 
-[**Gordian System Discussions**](https://github.com/BlockchainCommons/Gordian/discussions). For users and developers of the Gordian system, including the Gordian Server, Bitcoin Standup technology, QuickConnect, and the Gordian Wallet. If you want to talk about our linked full-node and wallet technology, suggest new additions to our Bitcoin Standup standards, or discuss the implementation our standalone wallet, the Discussions area of the [main Gordian repo](https://github.com/BlockchainCommons/Gordian) is the place.
+[**Gordian System Discussions**](https://github.com/BlockchainCommons/Gordian/discussions). For users and developers of the Gordian system. If you want to talk about our linked full-node and wallet technology, suggest new additions to our Bitcoin Standup standards, or discuss the implementation our standalone wallet, the Discussions area of the [main Gordian repo](https://github.com/BlockchainCommons/Gordian) is the place.
 
 [**Wallet Standard Discussions**](https://github.com/BlockchainCommons/AirgappedSigning/discussions). For standards and open-source developers who want to talk about wallet standards, please use the Discussions area of the [Airgapped Signing repo](https://github.com/BlockchainCommons/AirgappedSigning). This is where you can talk about projects like our [LetheKit](https://github.com/BlockchainCommons/bc-lethekit) and command line tools such as [seedtool](https://github.com/BlockchainCommons/bc-seedtool-cli), both of which are intended to testbed wallet technologies, plus the libraries that we've built to support your own deployment of wallet technology such as [bc-bip39](https://github.com/BlockchainCommons/bc-bip39), [bc-slip39](https://github.com/BlockchainCommons/bc-slip39), [bc-shamir](https://github.com/BlockchainCommons/bc-shamir), [Sharded Secret Key Reconstruction](https://github.com/BlockchainCommons/bc-sskr), [bc-ur](https://github.com/BlockchainCommons/bc-ur), and the [bc-crypto-base](https://github.com/BlockchainCommons/bc-crypto-base). If it's a wallet-focused technology or a more general discussion of wallet standards,discuss it here.
 
@@ -121,7 +77,7 @@ The best place to talk about Blockchain Commons and its projects is in our GitHu
 
 ### Other Questions & Problems
 
-As an open-source, open-development community, Blockchain Commons does not have the resources to provide direct support of our projects. Please consider the discussions area as a locale where you might get answers to questions. Alternatively, please use this repository's [issues](./issues) feature. Unfortunately, we can not make any promises on response time.
+As an open-source, open-development community, Blockchain Commons does not have the resources to provide direct support of our projects. Please consider the discussions area as a place where you might get answers to questions. Alternatively, please use this repository's [issues](./issues) feature. Unfortunately, we can not make any promises on response time.
 
 If your company requires support to use our projects, please feel free to contact us directly about options. We may be able to offer you a contract for support from one of our contributors, or we might be able to point you to another entity who can offer the contractual support that you need.
 
@@ -129,9 +85,9 @@ If your company requires support to use our projects, please feel free to contac
 
 The following people directly contributed to this repository. You can add your name here by getting involved. The first step is learning how to contribute from our [CONTRIBUTING.md](./CONTRIBUTING.md) documentation.
 
-| Name              | Role                | Github                                            | Email                                 | GPG Fingerprint                                    |
-| ----------------- | ------------------- | ------------------------------------------------- | ------------------------------------- | -------------------------------------------------- |
-| Christopher Allen | Principal Architect | [@ChristopherA](https://github.com/ChristopherA) | \<ChristopherA@LifeWithAlacrity.com\> | FDFE 14A5 4ECB 30FC 5D22  74EF F8D3 6C91 3574 05ED |
+| Name         | Role              | Github                               | Email                   | GPG Fingerprint                                    |
+| ------------ | ----------------- | ------------------------------------ | ----------------------- | -------------------------------------------------- |
+| Jonas Wagner | Software Engineer | [@Sjlver](https://github.com/Sjlver) | \<ltlygwayh@gmail.com\> | B61A 9761 C9D2 789C 0896  6C63 209C 9222 DB5F BD15 |
 
 ## Responsible Disclosure
 
