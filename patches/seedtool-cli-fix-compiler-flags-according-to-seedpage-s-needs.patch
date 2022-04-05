@@ -1,0 +1,37 @@
+From 871f8f74a89a31ad0bbd82cb52382db13834d181 Mon Sep 17 00:00:00 2001
+From: Jonas Wagner <ltlygwayh@gmail.com>
+Date: Sun, 13 Mar 2022 18:18:58 +0100
+Subject: [PATCH] Fix compiler flags, according to seedpage's needs.
+
+---
+ src/Makefile.in | 7 +++----
+ 1 file changed, 3 insertions(+), 4 deletions(-)
+
+diff --git a/src/Makefile.in b/src/Makefile.in
+index 8617bac..7e889c5 100644
+--- a/src/Makefile.in
++++ b/src/Makefile.in
+@@ -28,9 +28,8 @@ RESET=`tput sgr0`
+
+ CBOR_DIR = ../deps/cbor-lite
+
+-COMPILER = g++
+-CFLAGS += --debug -O0
+-CXXFLAGS += -std=c++17 -stdlib=libc++ --debug -O0 -I"$(CBOR_DIR)/include"
++CFLAGS += -g
++CXXFLAGS += -std=c++17 -g -I"$(CBOR_DIR)/include"
+
+ toolname = seedtool
+
+@@ -63,7 +62,7 @@ LDLIBS += -lbc-sskr -lbc-shamir -lbc-crypto-base -lbc-bip39 -lbc-ur -largp
+
+ UNAME := $(shell uname)
+ ifeq ($(UNAME), Linux)
+-    LDLIBS += -lm -lc++ -lc++abi -lgcc_s -lgcc
++    LDLIBS += -lm -lc++ -lc++abi
+ else ifeq ($(findstring MINGW64, $(UNAME)), MINGW64)
+     # on windows building with msys2/mingw64
+     LDLIBS += -lm -lc++ -lws2_32
+--
+2.25.1
+

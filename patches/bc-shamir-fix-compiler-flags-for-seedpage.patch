@@ -1,0 +1,39 @@
+From b67658a1e3f5a88820bb772509e4ca1e6b0063ad Mon Sep 17 00:00:00 2001
+From: Jonas Wagner <ltlygwayh@gmail.com>
+Date: Sun, 13 Mar 2022 18:36:36 +0100
+Subject: [PATCH] bc-shamir: fix compiler flags for seedpage.
+
+---
+ src/Makefile.in  | 2 +-
+ test/Makefile.in | 2 +-
+ 2 files changed, 2 insertions(+), 2 deletions(-)
+
+diff --git a/src/Makefile.in b/src/Makefile.in
+index 1d4de98..dd511fd 100644
+--- a/src/Makefile.in
++++ b/src/Makefile.in
+@@ -27,7 +27,7 @@ RED=`tput setaf 1`
+ GREEN=`tput setaf 2`
+ RESET=`tput sgr0`
+
+-CFLAGS += -g -O0
++CFLAGS += -g
+ ARFLAGS = rcs
+
+ OBJS = hazmat.o interpolate.o shamir.o
+diff --git a/test/Makefile.in b/test/Makefile.in
+index f57312e..daa3f0b 100644
+--- a/test/Makefile.in
++++ b/test/Makefile.in
+@@ -27,7 +27,7 @@ RED=`tput setaf 1`
+ GREEN=`tput setaf 2`
+ RESET=`tput sgr0`
+
+-CFLAGS += -g -O0
++CFLAGS += -g
+
+ .PHONY: all
+ all: test
+--
+2.25.1
+

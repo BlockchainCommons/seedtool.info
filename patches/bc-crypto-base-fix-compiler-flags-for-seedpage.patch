@@ -1,0 +1,39 @@
+From 53147f2c13a155ed306cce851a22e852a0267e8d Mon Sep 17 00:00:00 2001
+From: Jonas Wagner <ltlygwayh@gmail.com>
+Date: Sun, 13 Mar 2022 18:22:12 +0100
+Subject: [PATCH] crypto-base: fix compiler flags for seedpage.
+
+---
+ src/Makefile.in  | 2 +-
+ test/Makefile.in | 2 +-
+ 2 files changed, 2 insertions(+), 2 deletions(-)
+
+diff --git a/src/Makefile.in b/src/Makefile.in
+index 6a27592..a850db4 100644
+--- a/src/Makefile.in
++++ b/src/Makefile.in
+@@ -27,7 +27,7 @@ RED=`tput setaf 1`
+ GREEN=`tput setaf 2`
+ RESET=`tput sgr0`
+
+-CFLAGS += -g -O0
++CFLAGS += -g
+ ARFLAGS = rcs
+
+ UNAME := $(shell uname)
+diff --git a/test/Makefile.in b/test/Makefile.in
+index 8a5c167..442ea9a 100644
+--- a/test/Makefile.in
++++ b/test/Makefile.in
+@@ -27,7 +27,7 @@ RED=`tput setaf 1`
+ GREEN=`tput setaf 2`
+ RESET=`tput sgr0`
+
+-CFLAGS += -g -O0
++CFLAGS += -g
+
+ UNAME := $(shell uname)
+ ifeq ($(findstring MINGW64, $(UNAME)), MINGW64)
+--
+2.25.1
+
