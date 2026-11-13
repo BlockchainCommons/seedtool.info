@@ -1,6 +1,21 @@
-@tailwind base;
-@tailwind components;
-@tailwind utilities;
+@import "tailwindcss" source(none);
+@plugin "@tailwindcss/forms";
+
+/* Only these files are scanned for class names. */
+@source "../docs/**/*.{html,js}";
+
+/* Keep two Tailwind v3 defaults that the page was designed with. */
+@layer base {
+    /* Borders are light gray, rather than the text color. */
+    *, ::after, ::before, ::backdrop, ::file-selector-button {
+        border-color: var(--color-gray-200, currentcolor);
+    }
+
+    /* Buttons show a pointer cursor. */
+    button:not(:disabled), [role="button"]:not(:disabled) {
+        cursor: pointer;
+    }
+}
 
 .qr img, .qr canvas {
     margin: 0 auto;

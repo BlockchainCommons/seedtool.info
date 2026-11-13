@@ -61,12 +61,13 @@ python3 -m http.server -d docs    # then open http://localhost:8000
 
 ### Rebuild the CSS
 
-Tailwind scans `src/` and `docs/` for class names (see
-[`tailwind.config.js`](./tailwind.config.js)) and only emits the classes that
-are used. Rebuild after adding classes to `index.html` or `page.js`:
+Tailwind (v4) scans the HTML and JS files in `docs/` for class names and only
+emits the classes that are used. All configuration lives in
+[`src/page.css`](./src/page.css); there is no `tailwind.config.js`. Rebuild
+after adding classes to `index.html` or `page.js`:
 
 ```sh
-npx tailwindcss -i src/page.css -o docs/page.css
+npx @tailwindcss/cli -i src/page.css -o docs/page.css
 ```
 
 Add `--watch` to rebuild on every change.
