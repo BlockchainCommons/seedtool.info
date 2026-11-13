@@ -12,6 +12,12 @@ export CFLAGS="-O3 -I${INCLUDE}"
 export CXXFLAGS="-O3 -I${INCLUDE}"
 export LDFLAGS="-L${LIB}"
 
+# The patches are applied with `git am`, which needs a committer identity.
+# Set one here so that the build also works where git isn't configured (e.g.,
+# in a Docker container).
+export GIT_COMMITTER_NAME="seedtool.info build"
+export GIT_COMMITTER_EMAIL="build@localhost"
+
 NUM_PROCESSES="$(( $(grep processor /proc/cpuinfo | wc -l) - 1 ))"
 
 # Terminal colors
