@@ -2,7 +2,7 @@
 
 ### By Jonas Wagner
 
-[seedtool.info](https://seedtool.info) is a version of
+[seedtool.gordianstack.com](https://seedtool.gordianstack.com) is a version of
 [`seedtool`](https://github.com/BlockchainCommons/seedtool-cli) that is
 accessible to anyone with a web browser -- no technical skills needed. It aims
 to be a simple, easy to use, and secure way for everyone to generate seeds and
@@ -10,11 +10,11 @@ Shamir shares of seeds.
 
 ## Additional Information
 
-All documentation is integrated in the online version, accessible through https://seedtool.info.
+All documentation is integrated in the online version, accessible through https://seedtool.gordianstack.com.
 
 ## Usage Instructions
 
-Browse to https://seedtool.info and follow the hints. You can type `--help` into the "seedtool arguments..." field for more detailed instructions.
+Browse to https://seedtool.gordianstack.com and follow the hints. You can type `--help` into the "seedtool arguments..." field for more detailed instructions.
 
 ## Status - Alpha
 
